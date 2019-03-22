@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1= `"${error.status}"${error.message}`
+  img(src=`/static/images/404.png` alt='404')
+  pre= error.stack
+  a(href='/') GO BACK TO LIBRARY
