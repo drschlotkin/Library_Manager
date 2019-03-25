@@ -20,11 +20,12 @@ block content
       p
         input(type='submit', value='Update Book' )
 
-    form(action=`${book.id}/delete` method='POST' onsubmit="return confirm('Do you really want to delete this book?');") 
+    form.delete-form(action=`${book.id}/delete` method='POST' onsubmit="return confirm('Do you really want to delete this book?');") 
       p
         a.button(href='/books') Cancel
       p
         input(type='submit', value='Delete Book')
+    
   
 
   

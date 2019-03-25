@@ -17,10 +17,10 @@ block content
       p
         label(for='year') Year
         input#year(name='year', type='text', value=book.year)
-      div
+      div.form-buttons
         p
-          input.new(type='submit', value='Create New Book')
+          input(type='submit', value='Create New Book')
         p
-          a.button.cancel(href='/books') Cancel
+          a.button(href='/books') Cancel
 
 

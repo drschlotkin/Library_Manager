@@ -6,14 +6,14 @@ const Book = require('../models').Book;
 // Show list of all books
 router.get('/', (req, res) => {
   Book.findAll().then(books => {
-    res.render("index", {books});
+    res.render("index", {books, title: "Library"});
   }).catch(err => console.log(err));
 });
 
 
 // Display from to create book
 router.get('/new', (req, res) => {
-  res.render('new-book', {book: {}});
+  res.render('new-book', {book: {}, title: "New Book"});
 });
 
 
@@ -23,7 +23,7 @@ router.post('/new', (req, res) => {
     res.redirect('/books');
      }).catch(error => {
       if(error.name === "SequelizeValidationError") {
-        res.render("new-book", {book: Book.build(req.body), errors: error.errors});
+        res.render("new-book", {book: Book.build(req.body), errors: error.errors, title: "Error"});
       } else {
         throw error;
       };
@@ -37,17 +37,14 @@ router.post('/new', (req, res) => {
 router.get("/:id", (req, res) => {
  Book.findByPk(req.params.id).then(book => {
    if(book){
-     res.render('update-book', {book});
+     res.render('update-book', {book, title:"Update Book"});
    }else{
      res.render('page-not-found')
-    //  res.send(404)
-    //  res.render('page-not-found')
    }
  }).catch(error => {
    res.send(500, error)
  })
 });
-
 
 
 // Update book changes to database
@@ -64,7 +61,7 @@ router.post("/:id", (req, res) => {
       if(error.name === "SequelizeValidationError") {
         let book = Book.build(req.body);
         book.id = req.params.id;
-        res.render('update-book', {book, errors: error.errors});
+        res.render('update-book', {book, errors: error.errors, title:"New Book"});
       } else {
         throw error;
       };
@@ -90,21 +87,4 @@ router.post("/:id/delete", (req, res) => {
 });
 
 
-
-
-
 module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

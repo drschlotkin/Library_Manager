@@ -1,3 +1,5 @@
+/* My CSS addition are at the bottom of this file */
+
 body {
   padding: 10px 50px 50px;
   font: 18px 'Lato', sans-serif;
@@ -98,58 +100,79 @@ input[type=text] {
   color: rgb(223, 32, 32);
 }
 
-/* My CSS additions */
 
-table{
-  background: #20439B;
-  border-collapse:collapse;
-  text-align: left;
-  box-shadow: 5px 5px 4px #666666;
-  
-}
 
-.message{
-  margin-bottom: 40px;
-}
+/* MY CSS  */
 
-.main{
-  text-align: center;
-}
 
-.book-list{
-  display: inline-block;
-  
-}
+      /* LAYOUT.PUG */
+      .main-layout{
+        text-align: center;
+      }
 
-.book-detail{
-  display: inline-block;
-  background: #20439B;
-  padding: 20px;
-  box-shadow: 5px 5px 4px #666666;
-  border-radius: 5px;
-  margin-top: 50px;
-}
 
-.menu{
-  margin-bottom: 40px;
-}
+      /* INDEX.PUG */
+      table{
+        background: #20439B;
+        border-collapse: collapse;
+        text-align: left;
+        box-shadow: 5px 5px 4px #666666;
+      }
 
-.create{
-  float: left;
-}
+      .create-book-btn{
+        float: left;
+      }
 
-h1{
-  margin-bottom: 40px;
-}
+      .search-bar{
+        text-align: right;
+      }
 
-.new{
-  float:left
-}
+      .book-list{
+        display: inline-block;
+      }
 
-.cancel{
-  float:right;
-}
+      .menu{
+        margin-bottom: 40px;
+      }
+      
+      h1{
+        margin-bottom: 40px;
+      }
 
-.book-form{
-  text-align:left;
-}
+
+      /* NEW-BOOK.PUG & UPDATE-BOOK.PUG */
+      .book-detail{
+        display: inline-block;
+        background: #20439B;
+        padding: 20px;
+        box-shadow: 5px 5px 4px #666666;
+        border-radius: 5px;
+        margin-top: 50px;
+      }
+      
+      .book-form{
+        text-align:left;
+      }
+      
+      .create-buttons{
+        display: inline-block;
+      }
+
+      .delete-form{
+        text-align:left;
+        margin-top:-5px;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
