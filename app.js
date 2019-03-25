@@ -1,9 +1,9 @@
 const sequelize = require('./models').sequelize
 const express = require('express');
 const routes = require('./routes');
-
-const PORT = process.env.PORT || 3000;
 const books = require('./routes/books');
+const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 3000;
 
 // Initialize App
 const app = express();
@@ -13,6 +13,9 @@ app.use('/static', express.static('public'))
 
 // Use PUG for template engine
 app.set('view engine', 'pug')
+
+// Middleware for handling GET and POST requests
+app.use(bodyParser.urlencoded({extended: false}));
 
 // Access main router
 app.use(routes);

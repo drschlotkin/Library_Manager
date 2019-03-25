@@ -1,6 +1,26 @@
 extends layout
 
 block content
-
-each test in book
-  p=test.genre
+  div.book-list
+    h1 BOOKS
+    div.menu
+      a.button.create(href='/books/new') Create New Book
+      div.search
+        form(action="new", method="POST")
+          a.button(href='/books/new') Search
+          input(placeholder='Search for a book..', type='text')
+    table
+      thead
+        tr
+          th Title
+          th Author
+          th Genre
+          th Year
+      tbody
+        each book in books
+          tr
+            td
+              a(href='/books/' + book.id)=book.title
+            td=book.author
+            td=book.genre
+            td=book.year

@@ -18,22 +18,11 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     genre:{
-      type: DataTypes.STRING,
-      validate: {
-        notEmpty: {
-          msg: "Genre is required"
-        }
-      }
+      type: DataTypes.STRING,  
     },
     year:{
-      type: DataTypes.INTEGER,
-      validate: {
-        notEmpty: {
-          msg: "Year is required"
-        }
-      }
+      type: DataTypes.INTEGER,     
     }
   }, {});
-  
   return Book;
 };
