@@ -87,4 +87,18 @@ router.post("/:id/delete", (req, res) => {
 });
 
 
+//Search for book
+router.get("/search", (req, res) => {
+  console.log(req.params)
+  // Book.findByPk(req.params.id).then(book => {
+  //   if(book){
+  //     res.render('update-book', {book, title:"Update Book"});
+  //   }else{
+  //     res.render('page-not-found')
+  //   }
+  // }).catch(error => {
+  //   res.send(500, error)
+  // })
+ });
+
 module.exports = router;

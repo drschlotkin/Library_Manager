@@ -5,10 +5,10 @@ block content
     h1 BOOKS
     div.menu
       a.button.create-book-btn(href='/books/new') Create New Book
-      div.search-bar
-        form(action="new", method="POST")
-          a.button(href='/books/new') Search
-          input(placeholder='Search for a book..', type='text')
+    div.search-bar
+      form(action="/books/search", method="POST")
+        input#test(type='submit', value='Search')
+        input(placeholder='Search for a book..' type='text')
     table
       thead
         tr

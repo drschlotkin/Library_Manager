@@ -104,6 +104,9 @@ input[type=text] {
 
 /* MY CSS  */
 
+      * {
+        box-sizing: border-box
+      } 
 
       /* LAYOUT.PUG */
       .main-layout{
@@ -120,25 +123,22 @@ input[type=text] {
       }
 
       .create-book-btn{
-        float: left;
+        float: left;  
+        height: 40px;    
       }
 
       .search-bar{
         text-align: right;
+        margin-bottom: 20px;
       }
 
       .book-list{
         display: inline-block;
       }
-
-      .menu{
-        margin-bottom: 40px;
-      }
-      
+     
       h1{
         margin-bottom: 40px;
       }
-
 
       /* NEW-BOOK.PUG & UPDATE-BOOK.PUG */
       .book-detail{
@@ -163,7 +163,26 @@ input[type=text] {
         margin-top:-5px;
       }
 
+@media (min-width: 1024px)  {
+  /* .menu{
+    text-align:left;
+  } */
+}
 
+@media (max-width: 821px)  {
+  .search-bar{
+    display: block;
+    float:left;
+    margin: auto;
+    text-align: left;
+  }
+
+  
+  #test{
+    margin-left:0px;
+  }
+  
+}
 
 
 
