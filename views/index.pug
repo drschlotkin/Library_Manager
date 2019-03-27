@@ -3,12 +3,11 @@ extends layout
 block content
   div.book-list
     h1 BOOKS
-    div.menu
-      a.button.create-book-btn(href='/books/new') Create New Book
-    div.search-bar
-      form(action="/books/search", method="POST")
-        input#test(type='submit', value='Search')
-        input(placeholder='Search for a book..' type='text')
+    a.button(href='/books/new') Create New Book
+    div#search-form 
+      form(action='/books/search', method="GET")
+        input#search-btn(type='submit', value='Search')
+        input#search-input(placeholder='Search for a book..' type='text' name='search')
     table
       thead
         tr

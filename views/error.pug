@@ -2,6 +2,7 @@ extends layout
 
 block content
   h1= `"${error.status}"${error.message}`
-  img(src=`/static/images/404.png` alt='404')
+  div#back-btn
+    a.button(href='/') GO BACK TO LIBRARY
   pre= error.stack
-  a(href='/') GO BACK TO LIBRARY
+  

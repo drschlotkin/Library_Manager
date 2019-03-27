@@ -25,6 +25,7 @@ a.button, input[type=submit] {
   font-size: 14px;
   border-radius: 2px;
   cursor: pointer;
+  
 }
 
 form a.button, input[type=submit] {
@@ -104,17 +105,37 @@ input[type=text] {
 
 /* MY CSS  */
 
-      * {
-        box-sizing: border-box
-      } 
-
       /* LAYOUT.PUG */
       .main-layout{
         text-align: center;
+      }     
+
+      
+      /* INDEX.PUG */
+      .book-list{
+        display: inline-block;
       }
 
+      h1{
+        margin-bottom: 40px;
+      }
 
-      /* INDEX.PUG */
+      #search-form{
+        text-align:left;
+        display:inline-block;
+        margin:auto;
+        margin-bottom:10px;
+      }
+
+      #search-btn{
+        margin: 0 0 0 10px;
+        font-weight:bold;
+      }
+
+      #search-input{
+        width: 230px;
+      }
+
       table{
         background: #20439B;
         border-collapse: collapse;
@@ -122,23 +143,6 @@ input[type=text] {
         box-shadow: 5px 5px 4px #666666;
       }
 
-      .create-book-btn{
-        float: left;  
-        height: 40px;    
-      }
-
-      .search-bar{
-        text-align: right;
-        margin-bottom: 20px;
-      }
-
-      .book-list{
-        display: inline-block;
-      }
-     
-      h1{
-        margin-bottom: 40px;
-      }
 
       /* NEW-BOOK.PUG & UPDATE-BOOK.PUG */
       .book-detail{
@@ -154,20 +158,22 @@ input[type=text] {
         text-align:left;
       }
       
-      .create-buttons{
-        display: inline-block;
-      }
-
       .delete-form{
         text-align:left;
         margin-top:-5px;
       }
 
-@media (min-width: 1024px)  {
-  /* .menu{
-    text-align:left;
-  } */
-}
+
+      /* ERROR-PUG & PAGE-NOT-FOUND.PUG */
+      #back-btn{
+        padding-bottom:50px;
+      }
+
+      #no-results{
+        padding-bottom:30px;
+      }
+
+
 
 @media (max-width: 821px)  {
   .search-bar{
@@ -178,7 +184,7 @@ input[type=text] {
   }
 
   
-  #test{
+  #search-btn{
     margin-left:0px;
   }
   
