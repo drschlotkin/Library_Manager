@@ -8,6 +8,6 @@
 
 ## To Run This Project:
 
-* npm install
-* npm start
-
+* 'npm install' from the project directory
+* 'npm start' to start the application
+* 'http://localhost:3000' to view the running app
