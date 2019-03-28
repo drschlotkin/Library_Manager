@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Book = require('../models').Book;
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
 
@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     res.render("index", {books, title: "Library"});
   }).catch(error => {
     res.send(500, error);
-    })
+    });
 });
 
 
@@ -54,7 +54,6 @@ router.get("/search", (req, res) => {
     }else{
       res.render('page-not-found', {message: "search", title: "Not Found"});
     }
-   
   }).catch(error => {
       res.send(500, error);
     });
@@ -101,22 +100,13 @@ router.post("/:id", (req, res) => {
 
 // Delete book
 router.post("/:id/delete", (req, res) => {
-  Book.findByPk(req.params.id).then(book => {  
-    if(book) {
-      return book.destroy();
-    } else {
-      res.send(404);
-    }
+  Book.findByPk(req.params.id).then(book => { 
+    book ? book.destroy() : res.send(404);
   }).then(() => {
     res.redirect("/books");    
   }).catch(error => {
       res.send(500, error);
     });
 });
-
-
-
- 
-
 
 module.exports = router;

@@ -37,8 +37,7 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-
-// Once database updates are complete, start listening to the web server
+// Once database updates are complete, start listening to the server
 sequelize.sync()
   .then(() => {
     app.listen(PORT, () => console.log('Application running on localhost:3000'));
