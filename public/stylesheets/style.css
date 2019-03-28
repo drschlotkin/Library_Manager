@@ -174,21 +174,43 @@ input[type=text] {
       }
 
 
+      /* Pagination */
+      .pagination{
+        /* margin: 40px 0 0 0; */
+        text-align: center;
+        cursor: pointer;
+      }
+       
+        .pagination li{
+          display: inline;
+          margin-right:5px;
+          
+        }
+      
+          .pagination li a{
+            border: 1px solid #3e558e;
+            border-radius: 5px;
+            padding: 6px 16px;
+            text-decoration: none;
+            color: #eaeaea;
+            background: #20439B;
+            /* background: #13307A; */
+          }
+      
+          .pagination li a.active,
+          .pagination li a:hover{
+            /* background-color: #13307A; */
+            background-color: #0a1a42;
+            /* background-color: #20439B; */
+            color: #fff;
+          }
 
+
+/* Come back to this 
 @media (max-width: 821px)  {
-  .search-bar{
-    display: block;
-    float:left;
-    margin: auto;
-    text-align: left;
-  }
 
-  
-  #search-btn{
-    margin-left:0px;
-  }
-  
 }
+*/
 
 
 
