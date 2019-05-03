@@ -1,10 +1,14 @@
 # SQL Library Manager
 
-<a href="https://teamtreehouse.com" target="_blank">Team Treehouse</a> Full Stack Techdegree - Project #8
+## Details
+
+* Library application using Express.js with sequelize backed by SQLite database.
+* User is able to add, update, delete books.
+* Pagination and search feature included.
 
 ## Technologies Used:
 
-* JavaScript, Node.js, Express, PUG, HTML, CSS and SQL ORM Sequelize
+* JavaScript, Node.js, Express.js, PUG, HTML, CSS and SQL ORM Sequelize
 
 ## To Run This Project:
 
