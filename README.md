@@ -1,6 +1,6 @@
 # SQL Library Manager
 
-## Details
+## Details:
 
 * Library application using Express.js with sequelize backed by SQLite database.
 * User is able to add, update, and delete books.
