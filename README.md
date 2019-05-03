@@ -3,7 +3,7 @@
 ## Details
 
 * Library application using Express.js with sequelize backed by SQLite database.
-* User is able to add, update, delete books.
+* User is able to add, update, and delete books.
 * Pagination and search feature included.
 
 ## Technologies Used:
